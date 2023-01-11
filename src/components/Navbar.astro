@@ -1,0 +1,13 @@
+---
+import NavbarMobile from "./NavbarMobile.astro";
+import NavbarComputer from "./NavbarComputer.astro";
+
+---
+
+<div class="max-sm:hidden z-20">
+  <NavbarComputer />
+</div>
+
+<div class="sm:hidden">
+  <NavbarMobile />
+</div>

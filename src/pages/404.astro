@@ -1,0 +1,46 @@
+---
+import IndexLayout from "../layouts/IndexLayout.astro";
+
+const pagetitle = "🔧 404 Error"
+
+const paintings = ["/src/static/error-painting-1.png", "/src/static/error-painting-2.png", 
+                    "/src/static/error-painting-3.png", "/src/static/error-painting-3.png", 
+                    "/src/static/error-painting-5.png", "/src/static/error-painting-4.png", 
+                    "/src/static/error-painting-7.png"]
+---
+<IndexLayout pagetitle={pagetitle} >
+    <div class="grid grid-cols-2 items-center">
+        <div>
+            <h1 class="text-9xl font-semibold pb-14">404</h1>
+            <div>
+                <p>Oh dear user, I do apologize</p>
+                <p>For leading you to a 404 demise</p>
+                <p>The page you seek cannot be found</p>
+                <p>But do not despair, I'll turn this around</p>
+                <br/>
+                <p>Perhaps you mistyped the URL</p>
+                <p>Or clicked on a faulty link, that's not cool</p>
+                <p>But don't give up, don't lose your head</p>
+                <p>I'll help you find what you need, don't dread</p>
+                <br/>
+                <p>Take a deep breath, and start anew</p>
+                <p>Use the search bar, it'll lead you true</p>
+                <p>Or check out the menu, it's quite a treat</p>
+                <p>I promise you'll find something neat</p>
+                <br/>
+                <p>So don't despair, don't feel blue</p>
+                <p>I'll get you back on track, I'll see it through</p>
+                <p>I hope this apology poem</p>
+                <p>Helps to ease the 404 woe</p>
+                <br/>
+                <p>Sincerely,</p>
+                <p>Nikolai</p>
+                <br/>
+                <i class="text-sm pb-32">(yes I didn't make this, ChatGPT did.)</i>
+            </div>
+        </div>
+        <div>
+            <img src={paintings[Math.floor(Math.random() * paintings.length - 1)]} width={500} alt="painting" />
+        </div> 
+    </div>
+</IndexLayout>

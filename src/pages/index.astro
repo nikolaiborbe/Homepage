@@ -1,0 +1,38 @@
+---
+import Card from "../components/Card.svelte";
+import IndexLayout from "../layouts/IndexLayout.astro";
+import Timer from "../components/Timer.svelte";
+
+const blog_posts = await Astro.glob("./posts/blog/*.mdx")
+
+let title = "🏠 Homepage"
+---
+
+<IndexLayout pagetitle={title}>
+	<div>
+    	<div class="p-5 pt-10">
+			<a href="/blog" class="hover:underline">
+				<h1 class="text-4xl font-semibold">Blog</h1>
+				<h3>SOME OF MY PERSONAL IDEAS</h3>
+			</a>
+		</div>
+		<div class="flex max-md:flex-col gap-5 justify-start items-center">
+			{blog_posts.map((post) => 
+				<Card url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image} tags={post.frontmatter.tags} pubDate={post.frontmatter.pubDate} />
+			)}
+
+		</div>
+	</div>
+
+	<div>
+		<div class="p-5 pt-10">
+			<a href="/class-notes" class="hover:underline">
+				<h1 class="text-4xl font-semibold ">Class Notes</h1>
+				<h3>RIGHT NOW I'M SERVING IN THE MILITARY, BUT I WILL START TAKING NOTES HERE IN...</h3>
+			</a>
+		</div>
+		<div class="flex max-md:flex-col gap-5 justify-center items-center">
+			<Timer client:load/>
+		</div>
+	</div>
+</IndexLayout>

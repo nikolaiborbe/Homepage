@@ -1,0 +1,35 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.svelte";
+import Select from "../components/Select.svelte";
+
+const posts = await Astro.glob('./posts/class-notes/**/*.mdx') 
+const title = "🏫 Class Notes"
+
+const tags = [
+    ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
+]
+const subjects = [
+    ...new Set(posts.map((post) => post.frontmatter.subject).flat())
+]
+
+---
+
+<MainLayout title={title} undertitle={"RIGHT NOW I'M SERVING IN THE MILITARY, BUT I WILL START TAKING NOTE HERE WHEN I RETURN"} >
+    <div class="flex flex-wrap justify-center p-5 gap-5">
+        <Select title={"Select subject"} items={tags} />
+        <Select title={"Select tags"} items={["none"]} />
+    </div>
+    <div class="flex flex-wrap gap-5 justify-center">
+    {posts.map((post) =>
+        <Card 
+        url={post.url} 
+        title={post.frontmatter.title} 
+        description={post.frontmatter.description} 
+        image={post.frontmatter.image} 
+        tags={post.frontmatter.tags} 
+        pubDate={post.frontmatter.pubDate} 
+        subject={post.frontmatter.subject}/>
+    )}
+    </div>
+</MainLayout>

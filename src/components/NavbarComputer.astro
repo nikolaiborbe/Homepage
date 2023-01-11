@@ -1,0 +1,19 @@
+---
+import LightDark from "./Light-Dark.astro";
+---
+
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl" href="/">NGB</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1 gap-2">
+      <LightDark />
+      <li class="pl-4"><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/class-notes">Class Notes</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</div>
