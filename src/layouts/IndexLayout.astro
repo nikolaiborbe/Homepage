@@ -1,22 +1,12 @@
 ---
 import Navbar from "../components/Navbar.astro";
-
+import '../styles/glob.css'
 const { pagetitle} = Astro.props
 ---
 
 <!DOCTYPE html>
 
 <html lang="en" id="html" data-theme="dark">
-
-    <script>
-        let el: any = document.getElementById("theme-switch")
-        let doc: any = document.getElementById("html")
-
-        el.addEventListener("mousedown", () => {
-            let theme = doc.getAttribute("data-theme")
-            doc.setAttribute("data-theme", theme == "light" ? "dark" : "light")
-        })
-    </script>
 
 <head>
     <meta charset="UTF-8">
@@ -26,12 +16,13 @@ const { pagetitle} = Astro.props
     <title>{pagetitle}</title>
 </head>
 <body>
-    <Navbar />
-    <div class="flex justify-center">
-        <div>
-            <slot />
+    <div class="m-auto">
+        <Navbar />
+        <div class="px-[10px] pt-52 flex justify-center">
+            <div>
+                <slot />
+            </div>
         </div>
     </div>
 </body>
 </html>
-

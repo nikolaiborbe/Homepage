@@ -4,7 +4,10 @@ import Card from "../components/Card.svelte";
 import Select from "../components/Select.svelte";
 
 const posts = await Astro.glob('./posts/class-notes/**/*.mdx') 
-const title = "🏫 Class Notes"
+
+const title = "Class Notes"
+const pagetitle = "📖 Class Notes"
+const undertitle = "Right now i'm serving in the military, but I will start taking notes here when I return"
 
 const tags = [
     ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
@@ -15,7 +18,7 @@ const subjects = [
 
 ---
 
-<MainLayout title={title} undertitle={"RIGHT NOW I'M SERVING IN THE MILITARY, BUT I WILL START TAKING NOTE HERE WHEN I RETURN"} >
+<MainLayout pagetitle={pagetitle} title={title} undertitle={undertitle} >
     <div class="flex flex-wrap justify-center p-5 gap-5">
         <Select title={"Select subject"} items={tags} />
         <Select title={"Select tags"} items={["none"]} />

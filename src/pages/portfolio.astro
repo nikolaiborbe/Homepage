@@ -4,11 +4,12 @@ import { Image } from '@astrojs/image/components';
 
 const images = await Astro.glob("/src/static/portfolio/*.png")
 
-let title = "👨‍🚀 Portfolio"
+let pagetitle = "👨‍🚀 Portfolio"
+let title = "Portfolio"
 let links = ["https://battlefront.netlify.app/", "https://borbe.netlify.app/"]
 ---
 
-<MainLayout title={title} undertitle={"THESE ARE THE PROJECTS I'VE MADE"}>
+<MainLayout pagetitle={pagetitle} title={title} undertitle={"These are the projects I've made"}>
     <div class="flex justify-center">
         <div class="grid sm:grid-cols-2 max-sm:grid-cols-1 px-5 gap-5">
             {images.map((image, i) =>

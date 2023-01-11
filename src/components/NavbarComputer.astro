@@ -1,19 +1,30 @@
 ---
-import LightDark from "./Light-Dark.astro";
+import Logo from '../static/NGB-logo.svg'
 ---
 
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 px-10">
   <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl" href="/">NGB</a>
+    <a href="/"><img src={Logo} alt="" class="w-14"></a>
   </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal px-1 gap-2">
-      <LightDark />
-      <li class="pl-4"><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/class-notes">Class Notes</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/books">Books</a></li>
-      <li><a href="/about">About</a></li>
+  <div class="flex">
+    <ul class="flex px-1 gap-16">
+      <li><a href="/portfolio" class="text-gray-300 hover:text-white transition-all">Portfolio</a></li>
+      <li><a href="/class-notes" class="text-gray-300 hover:text-white transition-all">Class Notes</a></li>
+      <li><a href="/blog" class="text-gray-300 hover:text-white transition-all">Blog</a></li>
+      <li><a href="/books" class="text-gray-300 hover:text-white transition-all">Books</a></li>
+      <li><a href="/about" class="text-gray-300 hover:text-white transition-all">About</a></li>
     </ul>
   </div>
 </div>
+
+<style>
+  .navbar {
+    margin: auto;
+    max-width: 1140px;
+    justify-content: space-between;
+  }
+
+/*   * {
+    background-color: rgb(23, 250, 250, 0.1);
+  } */
+</style>

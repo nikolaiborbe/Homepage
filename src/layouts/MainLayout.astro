@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import '../styles/glob.css'
 import Title from "../components/Title.astro";
 
 const { pagetitle, title, undertitle } = Astro.props
@@ -9,16 +10,6 @@ const { pagetitle, title, undertitle } = Astro.props
 
 <html lang="en" id="html" data-theme="dark">
 
-    <script>
-        let el: any = document.getElementById("theme-switch")
-        let doc: any = document.getElementById("html")
-
-        el.addEventListener("mousedown", () => {
-            let theme = doc.getAttribute("data-theme")
-            doc.setAttribute("data-theme", theme == "light" ? "dark" : "light")
-        })
-    </script>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,11 +18,15 @@ const { pagetitle, title, undertitle } = Astro.props
     <title>{pagetitle}</title>
 </head>
 <body>
-    <Navbar />
-    <Title title={title} undertitle={undertitle} />
-    <div class="flex justify-center">
-        <div>
-            <slot />
+    <div>
+        <Navbar />
+        <div class="px-20 pt-32 max-w-[1140px] m-auto">
+            <Title title={title} undertitle={undertitle} />
+            <div class="flex justify-center pt-5">
+                <div>
+                    <slot />
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -13,7 +13,7 @@
 
 
 <a href={url}>
-  <div class="card w-96 h-96 bg-base-100 shadow-xl cursor-pointer hover:scale-105 transition-all">
+  <div class="card w-[450px] h-[450px] max-sm:w-[350px] max-sm:h-[350px] bg-base-100 shadow-xl cursor-pointer hover:scale-105 transition-all">
     <figure><img src={image} alt="Shoes" /></figure>
     <div class="card-body">
       <h2 class="card-title">
@@ -42,3 +42,11 @@
     </div>
   </div>
 </a>
+
+<style>
+  .card {
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-radius: 2.5rem;
+  }
+</style>

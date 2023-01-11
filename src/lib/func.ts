@@ -11,6 +11,15 @@ export function timeUntil(date: string) {
     return out
 }
 
+export function exactAge(b_date: Date) {
+	let Age = new Date(b_date).getTime()
+    let date = new Date()
+	let dif = date.getTime() - Age
+	let convert = dif / 31556952000
+	let out = convert.toString().substring(0,12)
+    return out
+}
+
 export function millToTime(ms: number) {
     const years = Math.floor(ms / (365*24*60*60*1000));
     const yearsms = ms % (365*24*60*60*1000);
