@@ -1,6 +1,5 @@
 <script>
     export let items;
-    export let color;
 
     let item = items[items.length - 1]
     let count = 0
@@ -13,12 +12,8 @@
         }
     }, 1000)
 
-    let styles = `inline-block w-24 rounded-md ${color}`
 </script>
 
-<div class={styles}>
+<div class="inline-block w-28 rounded-md bg-slate-900">
     <span class="font-bold">{item}</span>
-
 </div>
-
-
