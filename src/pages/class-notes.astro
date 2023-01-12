@@ -2,37 +2,25 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.svelte";
 import Select from "../components/Select.svelte";
+import Subjects from "../components/Subjects.svelte";
 
 const posts = await Astro.glob('./posts/class-notes/**/*.mdx') 
+const subjects = [
+    ...new Set(posts.map((post) => post.frontmatter.subject).flat())
+]
+const chapters = [
+    ...new Set(posts.map((post) => post.frontmatter.chapter).flat())
+]
 
 const title = "Class Notes"
 const pagetitle = "📖 Class Notes"
 const undertitle = "Right now i'm serving in the military, but I will start taking notes here when I return"
-
-const tags = [
-    ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
-]
-const subjects = [
-    ...new Set(posts.map((post) => post.frontmatter.subject).flat())
-]
-
 ---
 
 <MainLayout pagetitle={pagetitle} title={title} undertitle={undertitle} >
+    <Subjects posts={posts} subjects={subjects} chapters={chapters} />
     <div class="flex flex-wrap justify-center p-5 gap-5">
-        <Select title={"Select subject"} items={tags} />
-        <Select title={"Select tags"} items={["none"]} />
-    </div>
-    <div class="flex flex-wrap gap-5 justify-center">
-    {posts.map((post) =>
-        <Card 
-        url={post.url} 
-        title={post.frontmatter.title} 
-        description={post.frontmatter.description} 
-        image={post.frontmatter.image} 
-        tags={post.frontmatter.tags} 
-        pubDate={post.frontmatter.pubDate} 
-        subject={post.frontmatter.subject}/>
-    )}
+        <Select title={"Select subject"} items={subjects} />
+        <Select title={"Select tags"} items={chapters} />
     </div>
 </MainLayout>

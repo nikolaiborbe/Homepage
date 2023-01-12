@@ -2,25 +2,20 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 
 const blogPosts = await Astro.glob("../posts/blog/*.mdx");
-const classPosts = await Astro.glob("../posts/class-notes/**/*.mdx");
+
 const blogTags: any = [
     ...new Set(blogPosts.map((post) => post.frontmatter.tags).flat()),
 ];
-const classTags: any = [
-    ...new Set(classPosts.map((post) => post.frontmatter.tags).flat()),
-];
-
-const tags = [...blogTags, ...classTags];
 
 
-const title = "#️⃣ Tag Index";
+const title = "Tag Index";
 const pagetitle = "#️⃣ Tag Index";
 ---
 
 <MainLayout title={title} pagetitle={pagetitle}>
     <div class="flex gap-4">
         {
-            tags.map((tag) => (
+            blogTags.map((tag: any) => (
                 <p class="btn btn-ghost">
                     <a href={`/tags/${tag}`}>{tag}</a>
                 </p>

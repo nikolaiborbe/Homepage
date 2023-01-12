@@ -27,9 +27,7 @@
         <div class="flex justify-between items-center pt-4">
           <div class="badge badge-accent badge-outline">{subject}</div>
           <div class="card-actions justify-end">
-            {#each tags as tag}
-            <div class="badge badge-outline">{tag}</div>
-            {/each}
+            <div class="badge badge-outline">{tags}</div>
           </div>
         </div>
       {:else}
