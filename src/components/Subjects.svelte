@@ -11,8 +11,13 @@
         <select class="select select-bordered w-full max-w-xs">
           <option selected class="text-gray-500">Select subject</option>
           {#each subjects as item}
-          <!-- HOW TO DO IT
-            https://svelte.dev/tutorial/svelte-options -->
+          <!-- 
+          HOW TO DO IT
+          https://svelte.dev/tutorial/svelte-options 
+          
+          ALSO ADD SEARCHBAR
+          https://www.youtube.com/watch?v=Ju6VSLKXrJg
+          -->
             <option value={item}>{item}</option>
           {/each}
         </select>
