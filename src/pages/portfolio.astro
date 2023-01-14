@@ -11,9 +11,9 @@ let links = ["https://battlefront.netlify.app/", "https://borbe.netlify.app/"]
 
 <MainLayout pagetitle={pagetitle} title={title} undertitle={"These are the projects I've made"}>
     <div class="flex justify-center">
-        <div class="grid sm:grid-cols-2 max-sm:grid-cols-1 px-5 gap-5">
+        <div class="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-5">
             {images.map((image, i) =>
-                <a href={links[i]}>
+                <a href={links[i]} target="_blank">
                     <Image src={image.default} alt="" width={"500"} class="rounded-xl hover:scale-105 transition-all "/>
                 </a>
             )}
