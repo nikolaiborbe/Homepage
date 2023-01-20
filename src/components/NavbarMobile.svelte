@@ -12,7 +12,7 @@
 <div class="navbar bg-base-100 flex justify-between px-6">
   <a href="/"><img src={Logo} alt="" class="w-14"></a>
   <button on:mousedown={handleClick}>
-    <Hamburger state={menu} />
+    <Hamburger />
   </button>
 </div>
 
