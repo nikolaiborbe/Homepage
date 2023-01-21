@@ -13,12 +13,12 @@
     <div class="m-auto max-sm:px-4">
         <NGB />
         <h3 class="text-gray-400 text-xl font-light pt-12 pb-32 text-center lg:px-48 px-10">
-            I'm a <span class="font-bold inset-y-0 left-0 inline-block w-[8.5rem]">
-                <Age client:load b_date={b_date}/>
+            I'm a <span class="font-bold absolute inline-block w-[8.5rem]">
+                <Age b_date={b_date}/>
             </span> year-old <span>
-                <Roulette client:load items={personal} />
+                <Roulette items={personal} />
             </span> who enjoys programming, video games, and <span>
-                <Roulette client:load items={hobbies} />
+                <Roulette items={hobbies} />
             </span> This website contains my class notes, ideas, and my programming projects.
         </h3>
     </div>
