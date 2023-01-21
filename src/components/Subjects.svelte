@@ -97,7 +97,7 @@
             url={post.url}
             title={post.frontmatter.title}
             description={post.frontmatter.description}
-            image={post.frontmatter.svelte_image}
+            image={`/src/static/${post.frontmatter.image}`}
             tags={post.frontmatter.chapter}
             pubDate={post.frontmatter.pubDate}
             subject={post.frontmatter.subject}
