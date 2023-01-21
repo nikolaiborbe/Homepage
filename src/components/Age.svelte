@@ -10,4 +10,4 @@
     }, 30)
 </script>
 
-<span>{age} </span>
+<span>{age}</span>

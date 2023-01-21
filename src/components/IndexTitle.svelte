@@ -13,7 +13,7 @@
     <div class="m-auto max-sm:px-4">
         <NGB />
         <h3 class="text-gray-400 text-xl font-light pt-12 pb-32 text-center lg:px-48 px-10">
-            I'm a <span class="font-bold inline-block w-[8.5rem]">
+            I'm a <span class="font-bold text-left inline-block w-[8.5rem]">
                 <Age b_date={b_date}/>
             </span> year-old <span>
                 <Roulette items={personal} />
