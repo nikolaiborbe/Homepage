@@ -14,7 +14,7 @@
   <div
     class="card w-[450px] h-[450px] max-sm:w-[350px] max-sm:h-[350px] bg-base-100 shadow-xl cursor-pointer hover:scale-[1.02] transition-all"
   >
-    <figure><img src={image} alt="Shoes" /></figure>
+    <figure><img src={image} alt="" /></figure>
     <div class="card-body">
       <h2 class="card-title">
         {title}
