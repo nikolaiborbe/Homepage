@@ -1,5 +1,5 @@
 <script>
-  import Logo from '../static/NGB-logo.svg'
+  import Logo from '/src/static/NGB-logo.svg'
   import Hamburger from "./Hamburger.svelte";
   import Menu from './Menu.svelte';
 

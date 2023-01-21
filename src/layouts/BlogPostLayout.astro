@@ -6,16 +6,14 @@ const { frontmatter } = Astro.props;
 <MainLayout>
     <div class="flex justify-center pb-16 pt-5">
         <div class="flex lg:w-[45vw] md:w-[60vw] flex-col">
-            <div class="pb-5 pl-5 ">
+            <div>
                 <h1 class="text-5xl font-bold pt-5">{frontmatter.title}</h1>
                 <p class="text-lg py-5">{frontmatter.description}</p>
             </div>
-            <img src={frontmatter.image} alt="img" class="pb-1">
-            <center><i class="text-sm">(Art made by DALL•E)</i></center>
             <div class="max-md:px-5 self-center">
                 <div class="flex gap-10 pl-10 items-center py-10">
                     <a href="/about" class="hover:scale-105 transition-all">
-                        <img src="/src/static/pp.jpg" class="mask mask-squircle w-16">
+                        <img src="/static/pp.jpg" class="mask mask-squircle w-16">
                     </a>
                     <div>
                         <a href="/about" class="hover:underline underline-offset-2 ">
