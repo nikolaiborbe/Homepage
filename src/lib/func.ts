@@ -16,7 +16,7 @@ export function exactAge(b_date: Date) {
     let date = new Date()
 	let dif = date.getTime() - Age
 	let convert = dif / 31556952000
-	let out = convert.toString().substring(0,12)
+	let out = convert.toString().substring(0,11)
     return out
 }
 
