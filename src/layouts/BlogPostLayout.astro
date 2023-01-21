@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
                 <p class="text-lg py-5">{frontmatter.description}</p>
             </div>
             <div>
-                <img src={`/src/static/${frontmatter.image}`} alt="">
+                <img src={`../static/${frontmatter.image}`} alt="">
                 <i class="flex justify-center text-sm pt-2">Art created by DALL'E</i>
             </div>
             <div class="self-center">
