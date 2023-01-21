@@ -5,7 +5,7 @@
     export let func;
 </script>
 
-<div class="text-lg grid justify-items-center py-5">
+<div class="text-md grid justify-items-center py-5">
     <Katex>
         {func}
     </Katex>
