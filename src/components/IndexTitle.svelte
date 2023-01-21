@@ -3,17 +3,10 @@
     import Roulette from "./Roulette.svelte";
     import NGB from "./NGB.svelte";
 
-/*     let color = ["bg-gradient-to-tr from-orange-700 to-yellow-400", "bg-gradient-to-tr from-violet-800 to-rose-500", "bg-gradient-to-tr from-cyan-500 to-blue-800"]
-    let titleColor = `text-transparent bg-clip-text ${color}` */
-
-    /* let Nikolai_Color = ["text-transparent bg-clip-text bg-gradient-to-tr from-orange-700 to-yellow-400 ", "text-white", "text-white"] 
-    let Grytvik_Color = ["md:px-8 max-md:py-2 text-white ", "md:px-8 max-md:py-2 text-transparent bg-clip-text bg-gradient-to-tr from-violet-800 to-rose-500", "md:px-8 max-md:py-2 text-white"]; 
-    let Borbe_Color = ["text-white ", "text-white ", "text-transparent bg-clip-text bg-gradient-to-tr from-cyan-500 to-blue-800"];  */
-    
-
     let b_date = "08/23/2002"
     let personal = ["developer", "student"]
-    let hobbies = ["running.", "climbing.", "hiking."]
+    let hobbies = ["running.", "climbing.", "hiking.",              // Remember "."
+                    "swimming.", "rowing.", "skiing.", "biking."]
 </script>
 
 <div class="lg:max-w-[1140px]">
