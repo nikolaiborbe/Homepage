@@ -9,6 +9,7 @@ subject: Math
 chapter: Chapter 1
 ---
 import Math from '/src/components/Math.svelte'
+import Flashcard from '/src/components/Flashcard.svelte'
 
 ## Markdown (mdx)
 I'm not actually using Markdown. Instead, i'm using MDX, which let's you write code in the Markdown document.
@@ -52,3 +53,9 @@ Or just outline text like this: `Text`
 ## You can also embend links
 
 [Go to the markdown guide to learn more](https://www.markdownguide.org/)
+
+
+## You can also do Flahscards
+<div class="flex flex-wrap justify-center gap-5">
+    <Flashcard q={"What is the meaning of life?"} a={"42"}/>
+</div>
