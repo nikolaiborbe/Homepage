@@ -1,6 +1,6 @@
 <script>
     import { timeUntil } from "../lib/func";
-    import OnInterval from "./OnInterval.svelte";
+    import OnInterval from "./onInterval.svelte";
 
     let date = "08/20/2024";
     let time_until_school = timeUntil(date);
