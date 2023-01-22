@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     export let q;
     export let a;
 </script>
@@ -21,3 +21,4 @@
     </div>
   </label>
 </div>
+ -->
