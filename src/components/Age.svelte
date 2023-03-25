@@ -10,4 +10,6 @@
     }, 30)
 </script>
 
-<span>{age}</span>
+<div class="inline-block">  
+    <span class="font-bold font-mono text-white">{age}</span>
+</div>
