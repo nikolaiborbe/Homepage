@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.svelte";
 
-const posts = await Astro.glob('./posts/blog/*.mdx') 
+const posts = await Astro.glob("./posts/blog/*.mdx") 
 const title = "Blog"
 const pagetitle = "✍️ Blog"
 const undertitle = "Some of my personal ideas"
@@ -10,9 +10,17 @@ const undertitle = "Some of my personal ideas"
 
 <MainLayout pagetitle={pagetitle} title={title} undertitle={undertitle}>
     <div class="flex flex-wrap gap-5 justify-center">
-    {posts.map((post) =>
-        <Card url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.image} tags={post.frontmatter.tags} pubDate={post.frontmatter.pubDate} client:load />
-    )}
+        {posts.map((post) => 
+			<Card 
+				url={post.url} 
+				title={post.frontmatter.title} 
+				description={post.frontmatter.description} 
+				image={`/static/${post.frontmatter.image}`} 
+				tags={post.frontmatter.tags} 
+				pubDate={post.frontmatter.pubDate} 
+				client:load
+			/>
+		)}
     </div>
     <div class="my-5"/>
 </MainLayout>

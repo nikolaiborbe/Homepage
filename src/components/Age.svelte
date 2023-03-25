@@ -7,7 +7,7 @@
 
     setInterval(() => {
         age = exactAge(b_date)
-    }, 30)
+    }, 10)
 </script>
 
 <div class="inline-block">  
