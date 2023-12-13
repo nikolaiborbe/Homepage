@@ -1,5 +1,5 @@
 # Nikolai.vip
-This is my personal website where I share class notes, blog-posts, and some information about myself.
+> personal website with automated sorting, search, and more advanced backend logic.
 
 ## Unique to this website
 I've...
