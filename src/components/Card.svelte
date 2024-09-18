@@ -3,7 +3,7 @@
   export let image;
   export let title;
   export let description;
-  export let tags;
+  export let tags = [];
   export let pubDate;
   export let subject = false;
 

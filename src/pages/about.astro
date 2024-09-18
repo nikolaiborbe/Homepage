@@ -1,7 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const title = "About me";
+const pagetitle = "🧑 About";
+const undertitle = "";
 ---
 
-<MainLayout>
-    Nothing here yet!
+<MainLayout pagetitle={pagetitle} title={title} undertitle={undertitle}>
+	<main class="lg:px-20 md:px-10">
+		<p>
+			I'm a physics student from Norway with a passion for coding,
+			learning, and experimenting. I spend most of my time on schoolwork
+			and building a rocket at <a
+                target="_blank"
+				class="underline text-blue-400 hover:text-blue-200"
+				href="https://www.propulse.no/">Propulse</a
+			>.
+		</p>
+		<br />
+		<h2 class="font-bold">Contact</h2>
+		<p>
+			Send me an email: <a
+				class="hover-underline-animation"
+				href="mailto: nikolaiborbe@gmail.com">nikolaiborbe@gmail.com</a
+			>
+		</p>
+
+		<br />
+	</main>
 </MainLayout>
+
+<style>
+	.image {
+		width: clamp(200px, 100%, 100%);
+		height: auto;
+	}
+
+	.hover-underline-animation {
+		display: inline-block;
+		position: relative;
+		color: #999;
+	}
+
+	.hover-underline-animation::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #999;
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	.hover-underline-animation:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+</style>

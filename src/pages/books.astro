@@ -1,7 +1,101 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const title = "Books";
+const pagetitle = "📚 Books";
+const undertitle = "These are some of the books I've read over the years";
 ---
 
-<MainLayout>
-    There is nothing here yet!
+<MainLayout pagetitle={pagetitle} title={title} undertitle={undertitle} >
+	<main class="lg:px-20 md:px-10">
+		<h3 class="text-lg">
+			East of Eden <i class="font-thin">⎯ John Steinbeck</i>
+		</h3>
+		<p>
+			My favorite book. I loved the world-building, characters, and their
+			struggles.
+		</p>
+		<br />
+
+		<h3 class="text-lg">
+			What We Owe The Future <i class="font-thin">⎯ William Macaskill</i>
+		</h3>
+		<p>
+			A greatly entertaining read into modern philosophy and relevant
+			societal challenges.
+		</p>
+		<br />
+
+		<h3 class="text-lg">
+			The Picture of Dorian Gray <i class="font-thin">⎯ Oscar Wilde</i>
+		</h3>
+		<p>The most mind bending and thought provoking book I've ever read.</p>
+		<br />
+
+		<h3 class="text-lg">
+			Superinteligence <i class="font-thin">⎯ Nick Bostrom</i>
+		</h3>
+		<p>
+			Thought provoking & scary. Superintelligent AI is a serious
+			challenge that not enough people and working on. This is probably
+			the book most people should read, but be aware, it can be quite
+			challenging to read at times.
+		</p>
+		<br />
+
+		<h3 class="text-lg">
+			Grit <i class="font-thin">⎯ Angela Duckworth</i>
+		</h3>
+		<p>
+			This book shows that practice > talent. Anyone can become anything. <br
+			/> (Talent * Effort = Skill) => (Skill * Effort = Achievement)
+		</p>
+		<br />
+
+		<h3 class="text-lg">
+			Moderation in the age of greed <i class="font-thin"
+				>⎯ Henrik Syse</i>
+		</h3>
+		<p>
+			Interesting read into moderation, and how by eliminating "the chase"
+			of today's society we can achieve greater happiness.
+		</p>
+		<br />
+
+		<h3 class="text-lg">
+			The Strange Case if Dr Jekyll and Mr Hyde <i class="font-thin"
+				>⎯ Louis Stevenson</i
+			>
+		</h3>
+		<p>A great read with a flabbergasting ending.</p>
+		<br />
+
+		<h3 class="text-lg">
+			All Quiet on the Western Front <i class="font-thin"
+				>⎯ Erich Maria Remarque</i>
+		</h3>
+		<p>A quick and captivating read into the horrors of World War 1.</p>
+		<br />
+
+		<h3 class="text-lg">
+			The Book of Disquiet <i class="font-thin">⎯ Fernando Pessoa</i>
+		</h3>
+		<p>
+			A strange and facinating look into the mind of portugal's greatest
+			writers.
+		</p>
+		<br />
+
+		<h3 class="text-lg">
+			Zero To One <i class="font-thin">⎯ Peter Thiel</i>
+		</h3>
+		<p>
+			Might be worth the read if you want to start a TOP500 company, but
+			I've nothing good to say about it.
+		</p>
+		<br />
+
+		<center><p><i class="font-thin">( and more )</i></p></center>
+		<br />
+	</main>
 </MainLayout>
