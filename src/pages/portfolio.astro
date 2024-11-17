@@ -6,17 +6,20 @@ const images = await Astro.glob("/src/static/portfolio/*.png")
 
 let pagetitle = "👨‍🚀 Portfolio"
 let title = "Portfolio"
-let links = ["https://battlefront.netlify.app/", "https://borbe.netlify.app/"]
+let links = ["https://battlefront.netlify.app/", "https://borbe.netlify.app/", "https://pi-calc.netlify.app/", "https://www.propulse.no/", "https://chromewebstore.google.com/detail/search-shortcut/nifbjpindmbjplobfabmfgcceefmgehk", "https://github.com/linjeforeningen-delta/deltabeer-frontend", "https://github.com/Nikolai-Grytvik-Borbe/Chess_website"]
 ---
 
-<MainLayout pagetitle={pagetitle} title={title} undertitle={"These are the projects I've made"}>
-    <div class="flex justify-center">
+<MainLayout pagetitle={pagetitle} title={title} undertitle={"These are some of the projects I have worked on"}>
+    <div class="flex justify-center pb-20">
         <div class="grid sm:grid-cols-2 max-sm:grid-cols-1 gap-5">
             {images.map((image, i) =>
                 <a href={links[i]} target="_blank">
                     <Image src={image.default} alt="" width={"500"} class="rounded-xl hover:scale-105 transition-all "/>
                 </a>
             )}
+        <div class="flex justify-end self-end">
+            and many more...
+        </div>
         </div>
     </div>
 </MainLayout>
