@@ -19,7 +19,6 @@
                 <Roulette items={personal} />
             </span> who enjoys programming, video games, and <span>
                 <Roulette items={hobbies} />
-            </span> This website contains my class notes, ideas, and my programming projects.
         </h3>
     </div>
 </div>
