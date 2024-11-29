@@ -20,7 +20,7 @@
                 <Roulette items={personal} />
             </span> who enjoys programming, video games, and <span>
                 <Roulette items={hobbies} />
-            <div class="pt-24">
+            <div class="pt-16">
                 <Button />
             </div>
         </h3>

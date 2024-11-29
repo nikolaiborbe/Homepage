@@ -49,7 +49,6 @@
         background: linear-gradient(45deg, #ff6b6b, #4c8bf5); /* Same gradient */
         z-index: -1;
         margin: -2px; /* Adjust this for border thickness */
-        border-radius: inherit;
     }
 
     button::after {
@@ -61,6 +60,6 @@
         bottom: 2px;
         background: black; /* Button inner background */
         z-index: -1;
-        border-radius: inherit;
+        border-radius: 7px;
     }
 </style>
