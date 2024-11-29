@@ -14,6 +14,6 @@
 
 </script>
 
-<div class="inline-block w-28 rounded-md bg-zinc-800">
+<div class="inline-block m-[2px] w-28 rounded-md bg-zinc-800">
     <span class="font-bold">{item}</span>
 </div>

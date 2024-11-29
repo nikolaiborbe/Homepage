@@ -3,6 +3,12 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			backgroundImage: {
+				'dot-pattern': 'radial-gradient(var(--dot-color) 0.5px, transparent 1px)',
+			},
+			backgroundSize: {
+				dots: '40px 40px',
+			},
 		}
 	},
 	daisyui: {

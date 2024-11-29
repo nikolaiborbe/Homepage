@@ -16,10 +16,10 @@ const { pagetitle } = Astro.props
     <link rel="icon" href="data:,">
     <title>{pagetitle}</title>
 </head>
-<body>
+<body class="bg-dot-pattern bg-dots h-screen">
     <div class="m-auto">
         <Navbar />
-        <div class="px-[10px] pt-52 flex justify-center">
+        <div class="px-[10px] md:pt-80 pt-32 flex justify-center">
             <div>
                 <slot />
             </div>
