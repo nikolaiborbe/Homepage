@@ -16,7 +16,7 @@
   </button>
 </div>
 
-{#if menu == true}
+{#if menu}
     <Menu />
 {/if}
 
